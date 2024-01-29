@@ -1,0 +1,76 @@
+
+:root {
+  --primary-color: #3498db; 
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --border-radius: 10px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+.user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.user-details {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.avatar-container {
+  margin-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover; 
+  border: 3px solid var(--primary-color);
+}
+
+.info-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.info-container p {
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: rgb(32, 45, 223);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+
+.loading {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .user-details {
+    width: 90%;
+  }
+}

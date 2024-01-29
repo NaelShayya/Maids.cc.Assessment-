@@ -1,0 +1,16 @@
+<div *ngIf="user; else loading" class="user-container">
+  <div class="user-details">
+    <div class="avatar-container">
+      <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}" class="avatar">
+    </div>
+    <div class="info-container">
+      <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <!-- Add more user details here as needed -->
+      <button class="back-button" (click)="goBack()">Back</button>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="loading">Loading...</div>
+</ng-template>

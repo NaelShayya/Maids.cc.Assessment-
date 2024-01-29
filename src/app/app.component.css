@@ -1,0 +1,162 @@
+
+/* topnav css  */
+.topnav {
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+.topnav a {
+    float: left;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 14px 16px;
+}
+
+.menu {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    display: none;
+}
+/* topnav css  */
+
+/* left sidebar nav  */
+
+.sidebar {
+    position: fixed;
+    top: 63px;
+    overflow: auto;
+    background-color: #fff;
+    height: 100%;
+    border-right: 1px solid rgb(128, 128, 128);
+    padding: 30px 5px;
+    margin: 0px;
+    width: 200px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #000;
+    text-align: left;
+    display: block;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+.sidebar .icon {
+    float: right;
+}
+.sidebar a:hover {
+    background-color: #007bff; /* Blue color on hover */
+    color: #fff; /* White text color */
+    transition: background-color 0.3s; /* Smooth transition for the color change */
+}
+
+.dropdow-container{
+    padding-left: 10px;
+    overflow-y: hidden;
+    max-height: 0px;
+    transition: all .15s ease;
+}
+
+.dropdow-container.show{
+    max-height: 1000px;
+    transition: all .15 ease;
+}
+ul{
+    padding: 0px;
+}
+ul>li>a.active{
+    color: #000;
+}
+
+/* left sidebar nav  */
+
+/* main-content */
+.main-content {
+    margin-left:230px;
+    margin-top: 100px;
+    padding: 10px 18px;
+    transition: margin-left .5s;
+}
+/* main-content */
+
+
+
+@media screen and (max-width:500px) {
+
+    .menu 
+    {
+        display: block;
+    }
+    .sidebar{
+        display: none;
+        width: 160px;
+    }
+    .sidebar a{
+        padding: 10px 0px;
+    }
+    .main-content
+    {
+        margin-left: 0px;
+    }
+
+}
+/* app.component.css */
+.search-container {
+    margin-left: 520px;
+    margin-top: 15px;
+    
+  }
+ 
+  .users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .user-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px; /* or any other width */
+  }
+  
+  .user-info {
+    text-align: center;
+  }
+  
+  .user-info img {
+    width: 100px; /* adjust as needed */
+    height: 100px; /* adjust as needed */
+    border-radius: 50%;
+  }
+  
+  /* Add more styles as needed */
+  /* app.component.css or a global stylesheet */
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  

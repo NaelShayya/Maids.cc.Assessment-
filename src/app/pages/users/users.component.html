@@ -1,0 +1,18 @@
+<div class="user-list">
+  <div *ngFor="let user of users" class="user-card">
+    <div class="avatar-container">
+      <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}" class="user-avatar">
+    </div>
+    <div class="user-info">
+      <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+      <p>User ID: {{ user.id }}</p>
+      <button (click)="viewDetails(user.id)" class="details-btn">View Details</button>
+    </div>
+  </div>
+  
+  <div class="pagination">
+    <button (click)="onPrevious()" class="page-btn">Previous</button>
+    <span class="page-number">Page {{ currentPage }}</span>
+    <button (click)="onNext()" class="page-btn">Next</button>
+  </div>
+</div>
