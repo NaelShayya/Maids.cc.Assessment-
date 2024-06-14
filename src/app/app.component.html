@@ -1,62 +1,6 @@
-<!-- topnavbar -->
-<div class="topnav shadow p-1">
-    <a>Dashboard</a>
-    <span class="menu" (click)="openNav(true)"><i class="bi bi-list"></i></span>
-    <div class="search-container">
-        <input type="text" placeholder="Search by User ID" (keyup)="search($event)">
-      </div>
-      <div *ngIf="isLoading | async" class="loading-bar">
-        Loading...
-      </div>
-      
-      <!-- Users List -->
-      <div class="users-list">
-        <div *ngFor="let user of filteredUsers" class="user-card">
-          <!-- Display user info here. Adjust as per your user data structure -->
-          <div class="user-info">
-            <img [src]="user.avatar" alt="User Avatar">
-            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
-            <p><strong>ID:</strong> {{ user.id }}</p>
-            <p><strong>Email:</strong> {{ user.email }}</p>
-          </div>
-        </div>
-      </div>
-      
-</div>
-<!-- topnavbar -->
-
-<!-- left sidebar nav  -->
-
-<div  class="sidebar shadow p-2"  id="sidebar"  [ngStyle]="responsiveMenu">
-    <ul>
-        <li><a routerLink=""><i class="bi bi-speedometer2"></i> Dashboard</a></li>
-        <li><a routerLink="/reports"><i class="bi bi-card-text"></i> Reports</a></li>
-        <li>
-            <a href="#"><i class="bi bi-bag"></i> Products <i class="bi bi-arrow-right icon"></i></a>
-            <ul class="dropdow-container">
-                <li><a href="#">Link1</a></li>
-                <li><a href="#">Link2</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#"><i class="bi bi-tag"></i> Categories <i class="bi bi-arrow-right icon"></i></a>
-            <ul class="dropdow-container">
-                <li><a href="#">Link1</a></li>
-                <li><a href="#">Link2</a></li>
-            </ul>
-        </li>
-        <li><a routerLink="/users"><i class="bi bi-person-gear"></i> User</a></li>
-        <li><a href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
-
-    </ul>
-</div>
-<!-- left sidebar nav  -->
-
-
-<!-- main content  -->
+<app-header (toggleSidenav)="responsiveMenu = $event ? { transform: 'translateX(0)' } : { transform: 'translateX(-100%)' }"></app-header>
+<app-sidenav [responsiveMenu]="responsiveMenu"></app-sidenav>
 
 <div class="main-content" [ngStyle]="responsiveContent">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
-
-<!-- main content  -->

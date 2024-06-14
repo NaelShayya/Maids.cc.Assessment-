@@ -1,0 +1,22 @@
+<div class="topnav shadow p-1">
+    <span class="menu" (click)="openNav(true)"><i class="bi bi-list"></i></span>
+    <div class="search-container">
+      <input type="text" placeholder="Search by User ID" (keyup)="search($event)">
+      <div *ngIf="isLoading" class="loading-bar">
+        Loading...
+      </div>
+      <div *ngIf="filteredUsers.length > 0" class="users-list">
+        <div *ngFor="let user of filteredUsers" class="user-card">
+          <div class="user-info">
+            <img [src]="user.avatar" alt="User Avatar">
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <p><strong>ID:</strong> {{ user.id }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <button (click)="viewDetails(user.id)" class="details-btn">View Details</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

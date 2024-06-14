@@ -1,0 +1,23 @@
+<div class="sidebar shadow p-2" [ngStyle]="responsiveMenu" id="sidebar">
+    <ul>
+      <li><a routerLink=""><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+      <li><a routerLink="/reports"><i class="bi bi-card-text"></i> Reports</a></li>
+      <li>
+        <a href="#"><i class="bi bi-bag"></i> Products <i class="bi bi-arrow-right icon"></i></a>
+        <ul class="dropdown-container">
+          <li><a href="#">Link1</a></li>
+          <li><a href="#">Link2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="bi bi-tag"></i> Categories <i class="bi bi-arrow-right icon"></i></a>
+        <ul class="dropdown-container">
+          <li><a href="#">Link1</a></li>
+          <li><a href="#">Link2</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/users"><i class="bi bi-person-gear"></i> User</a></li>
+      <li><a href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+    </ul>
+  </div>
+  
